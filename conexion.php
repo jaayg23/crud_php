@@ -1,6 +1,6 @@
 <?php
 
-$servidor="mysql:dbname=prueba php;host=127.0.0.1";
+$servidor="mysql:dbname=prueba;host=127.0.0.1";
 $usuario="root";
 $password="";
 

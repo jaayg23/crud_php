@@ -68,8 +68,7 @@ switch($accion2){
 
         $sentencia->execute();
         
-        echo $txtNombre;
-        echo "Presionaste btnAgregar";
+        
     break;
     case "btnModificar":
 
@@ -84,8 +83,7 @@ switch($accion2){
 
         header('Location: index.php');
 
-        echo $txtNombre;
-        echo "Presionaste btnModificar";
+       
     break;
     case "btnEliminar":
 
@@ -95,12 +93,10 @@ switch($accion2){
 
         header('Location: categorias.php');
 
-        echo $txtID;
-        echo "Presionaste btnEliminar";
+        
     break;
     case "btnCancelar":
-        echo $txtID;
-        echo "Presionaste btnCancelar";
+        
     break;
 }
 
