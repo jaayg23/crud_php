@@ -23,8 +23,7 @@ switch($accion){
         $sentencia->bindParam(':Descripcion',$txtDescripcion);
         $sentencia->execute();
         
-        echo $txtNombre;
-        echo "Presionaste btnAgregar";
+        
     break;
     case "btnModificar":
 
@@ -35,10 +34,9 @@ switch($accion){
         $sentencia->bindParam(':id',$txtID);
         $sentencia->execute();
 
-        header('Location: index.php');
+        header('Location: categorias.php');
 
-        echo $txtNombre;
-        echo "Presionaste btnModificar";
+        
     break;
     case "btnEliminar":
 
@@ -48,12 +46,7 @@ switch($accion){
 
         header('Location: categorias.php');
 
-        echo $txtID;
-        echo "Presionaste btnEliminar";
-    break;
-    case "btnCancelar":
-        echo $txtID;
-        echo "Presionaste btnCancelar";
+        
     break;
 }
 
@@ -81,7 +74,7 @@ switch($accion2){
         $sentencia->bindParam(':id',$txtIDpro);
         $sentencia->execute();
 
-        header('Location: index.php');
+        header('Location: categorias.php');
 
        
     break;
@@ -95,9 +88,7 @@ switch($accion2){
 
         
     break;
-    case "btnCancelar":
-        
-    break;
+
 }
 
 $sentencia=$pdo->prepare("SELECT * FROM `categorias` WHERE 1");
@@ -141,7 +132,6 @@ $listaPorductos=$sentenciaPro->fetchAll(PDO::FETCH_ASSOC);
         <button value="btnAgregar" type="submit" name="accion">Agregar</button>
         <button value="btnModificar" type="submit" name="accion">Modificar</button>
         <button value="btnEliminar" type="submit" name="accion">Eliminar</button>
-        <button value="btnCancelar" type="submit" name="accion">Cancelar</button>
         </form>
 
     <div class="row">
@@ -207,7 +197,6 @@ $listaPorductos=$sentenciaPro->fetchAll(PDO::FETCH_ASSOC);
         <button value="btnAgregar" type="submit" name="accion2">Agregar</button>
         <button value="btnModificar" type="submit" name="accion2">Modificar</button>
         <button value="btnEliminar" type="submit" name="accion2">Eliminar</button>
-        <button value="btnCancelar" type="submit" name="accion2">Cancelar</button>
         </form>
         <div class="row">
 
